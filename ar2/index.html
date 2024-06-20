@@ -34,7 +34,32 @@
                     gesture-handler
                 ></a-image>
             </a-marker>
+    <a-assets>
+                <a-asset-item
+                    id="animated-asset"
+                    src="assets/asset.gltf"
+                ></a-asset-item>
+            </a-assets>
 
+            <a-marker
+                id="animated-markerB"
+                type="pattern"
+                preset="custom"
+                url="assets/marker2.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerB"
+            >
+                <a-entity
+                    id="bowser-model"
+                    scale="12.151651388632574 12.151651388632574 12.151651388632574"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
     </body>
